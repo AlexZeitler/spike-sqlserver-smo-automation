@@ -1,0 +1,1 @@
+# spike-sqlserver-smo-automation

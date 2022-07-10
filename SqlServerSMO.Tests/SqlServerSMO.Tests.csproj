@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.0.123" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
         <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.47021.0" />
         <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
@@ -24,7 +25,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Resources" />
+      <Folder Include="Resources\Scripts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Scripts\TestTable.sql" />
+      <Content Include="Resources\Scripts\TestTable.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
